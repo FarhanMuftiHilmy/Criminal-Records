@@ -45,7 +45,8 @@ class CriminalController extends Controller
             'nama' => 'required|string|max:20',
             'kasus' => 'required|string',
             'foto'=>'required|image|mimes:jpeg,jpg,png',
-            'pidana' => 'required|numeric',
+            'pidana' => 'required|string',
+            'denda' => 'required|numeric',
             'tgl_tangkap' => 'required|date',
         ]);
         $foto = $request->foto;
@@ -57,6 +58,7 @@ class CriminalController extends Controller
         $criminal->kasus = $request->kasus;
         $criminal->foto = $namafile;
         $criminal->pidana = $request->pidana;
+        $criminal->denda = $request->denda;
         $criminal->tgl_tangkap = $request->tgl_tangkap;
         $criminal->save();
         return redirect('/criminal')->with('pesan','Data Kriminal Berhasil di simpan');
@@ -81,6 +83,7 @@ class CriminalController extends Controller
         $criminal->nama = request('nama');
         $criminal->kasus = request('kasus');
         $criminal->pidana = request('pidana');
+        $criminal->denda = request('denda');
         $criminal->tgl_tangkap = request('tgl_tangkap');
         
         if (request('foto')!= null){

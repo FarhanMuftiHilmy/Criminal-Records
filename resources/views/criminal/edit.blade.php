@@ -18,9 +18,15 @@
             </div>
         </div>  
         <div class="form-group row">
-            <label for="judul_kriminal" class="col-sm-3 col-form-label">Pidana Denda</label>
+            <label for="judul_kriminal" class="col-sm-3 col-form-label">Pidana</label>
             <div class="col-sm-9">
                 <input type="text" id="pidana" name="pidana" class="form-control" value="{{ $criminal->pidana }}">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="judul_kriminal" class="col-sm-3 col-form-label">Denda</label>
+            <div class="col-sm-9">
+                <input type="text" id="denda" name="denda" class="form-control" value="{{ $criminal->denda }}">
             </div>
         </div>
         <div class="form-group row">

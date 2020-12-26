@@ -18,6 +18,7 @@ class CreateTableCriminal extends Migration
             $table->string('nama');
             $table->string('kasus');
             $table->string('pidana');
+            $table->string('denda');
             $table->string('tgl_tangkap');
             $table->timestamps();
         });

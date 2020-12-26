@@ -18,6 +18,8 @@
         <link rel="stylesheet" href="{{ asset('css/bootstrap-datepicker.css') }}">
         <script src="{{ asset('js/jquery.js') }}"> </script>
         <script src="{{ asset('js/bootstrap-datepicker.js') }}"> </script>
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
         <!-- Styles -->
         <style>
@@ -29,6 +31,8 @@
                 height: 100vh;
                 margin: 0;
             }
+
+        
 
             .full-height {
                 height: 100vh;
@@ -92,12 +96,13 @@
                 background-color: gray; 
                 border-color: gray; 
             }
+
         </style>
     </head>
     <body>
         <div class="flex-center position-ref bg-dark">
 
-            <div class="content text-light" >
+            <div class="content text-light bg-dark" >
                 <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
                     <div class="container">
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-7" aria-controls="navbarSupportedContent-7" aria-expanded="false" aria-label="Toggle navigation">
@@ -167,12 +172,10 @@
                 </nav>
                 @yield('content')
                 @include('layout.menu')
-            </div> 
+        
+                
+            </div>  
             
-
-            
-
-
             <script src="{{ asset('js/main.js') }}"></script> 
             <script type="text/javascript">
                 $('.date').datepicker({
@@ -181,5 +184,7 @@
                 });
             </script>
         </div>
+        
+            
     </body>
 </html>

@@ -31,6 +31,10 @@
                             <td>Pidana</td>
                             <td><input type="text" name="pidana"></td>
                         </tr>
+                        <tr>
+                            <td>Denda</td>
+                            <td><input type="text" name="denda"></td>
+                        </tr>
                         <tr>    
                             <td>Tgl Penangkapan</td>
                             <td><input type="text" class="date" name="tgl_tangkap"></td>

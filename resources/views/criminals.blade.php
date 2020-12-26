@@ -1,11 +1,8 @@
 @extends('layout.master')
 
 @section('content')
-
-
-
-<section id="criminal" class="py-5 text-center bg-dark text-light">
-    <div class="container">
+<section id="criminal" class="py-5 text-center text-light bg-dark">
+    <div class="container bg-dark">
       <h2>Daftar Kriminal</h2>
       <hr>
       <div class="row">

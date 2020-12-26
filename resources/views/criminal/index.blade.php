@@ -21,7 +21,8 @@
                     <th>Nama</th>
                     <th>Foto</th>
                     <th>Kasus</th>
-                    <th>Pidana Denda</th>
+                    <th>Pidana</th>
+                    <th>Denda</th>
                     <th>Tgl. Penangkapan</th>
                     <th>Aksi</th>
                 </tr>
@@ -34,11 +35,14 @@
                         <td><img src="{{ $criminal->foto != null ? asset('images/'.$criminal->foto) : asset('image-not-found.jpg') }}" style="width: 100px"></td>
                         <td>{{ $criminal->kasus }}</td>
                         <td>{{ $criminal->pidana }}</td>
+                        <td>{{ "Rp ".number_format($criminal->denda,2,',','.') }}</td>
                         <td>{{ $criminal->tgl_tangkap->format('d/m/Y') }}</td>
                         <td>
                             <form action="{{ route('criminal.destroy',$criminal->id)}}" method="post">
                                 @csrf
                                 <a href="{{ route('criminal.edit',$criminal->id)}}" class="btn btn-secondary">Ganti</a>
+    
+                                
                                 <button type="submit" class="btn btn-warning" onClick="return confirm('Apakah anda yakin menghapus?')">
                                     Hapus
                                 </button>

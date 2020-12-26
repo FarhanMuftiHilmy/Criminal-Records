@@ -37,6 +37,7 @@
                             <td><img src="{{ $criminal->foto != null ? asset('images/'.$criminal->foto) : asset('image-not-found.jpg') }}" style="width: 100px"></td>
                             <td>{{ $criminal->kasus }}</td>
                             <td>{{ $criminal->pidana }}</td>
+                            <td>{{ "Rp ".number_format($criminal->denda,2,',','.') }}</td>
                             <td>{{ $criminal->tgl_tangkap->format('d/m/Y') }}</td>
                             <td>
                                 <form action="{{ route('criminal.destroy',$criminal->id)}}" method="post">
